@@ -98,6 +98,7 @@ const DataGridView = ({
               <>
                 <MUIButton
                   id="basic-button"
+                  tw='bg-paysure-10 text-paysure-primary-100'
                   aria-controls={open ? 'basic-menu' : undefined}
                   aria-haspopup="true"
                   aria-expanded={open ? 'true' : undefined}
@@ -174,6 +175,9 @@ const Wrapper = tw.div`my-4`
 const FuncWrappper = tw.div`w-full space-y-2.5 2xl:(flex items-center justify-between space-x-2.5 space-y-0)`
 const MUIButton = tw(
   Button,
-)`normal-case text-paysure-100 bg-paysure-10 px-5 py-3 text-sm tracking-[-0.025em]`
+)`normal-case  px-5 py-3 text-sm tracking-[-0.025em]`
+
+
+// text-paysure-primary-100 bg-paysure-10
 
 export default DataGridView

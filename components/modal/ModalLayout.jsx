@@ -55,7 +55,7 @@ const DialogTitle = tw.h5`px-8 text-base text-paysure-text-100`
 const Form = tw.form`px-8 py-4`
 const ModalButton = tw(
   Button,
-)`normal-case bg-paysure-100 text-white w-full py-5 rounded-xl text-sm hover:(bg-paysure-100 shadow-xl)`
+)`normal-case bg-paysure-primary-100 text-white w-full py-5 rounded-xl text-sm hover:(bg-paysure-primary-100 shadow-xl)`
 const IconWrapper = tw.button`absolute right-5 top-3.5 text-[#425D8A] hover:(text-red-700) transition-colors cursor-pointer stroke-current`
 
 export default Index_modal_layout

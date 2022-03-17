@@ -8,7 +8,7 @@ import { HomeCardAvatar } from './SVGIcons'
 const HomeDisplayCard = ({ data = [], hasIcon, title }) => {
   return (
     <div tw="mt-10">
-      {title && <Title className="font-500">{title}</Title>}
+      {title && <Title tw="font-semibold">{title}</Title>}
       <div>
         <MainWrapper tw="mt-5">
           {data.map(({ amount, title, link }, index) => {
@@ -39,7 +39,7 @@ const HomeDisplayCard = ({ data = [], hasIcon, title }) => {
 
                   <div css={[!hasIcon && tw`space-y-3`]}>
                     <H1 className="font-bold">{amount}</H1>
-                    <P>{title}</P>
+                    <P tw=''>{title}</P>
                   </div>
                 </>
               )
@@ -75,8 +75,8 @@ const HomeDisplayCard = ({ data = [], hasIcon, title }) => {
 const MainWrapper = tw.div`grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 xl:(gap-5)`
 const Wrapper = tw.div`bg-blue-light min-w-[130px] border border-border rounded-lg transition-colors lg:(min-w-[235px])`
 const AvatarWrapper = tw.div`flex justify-end`
-const H1 = tw.h1`text-2xl sm:text-3xl lg:text-3xl xl:text-[33px] text-[#191716]`
-const P = tw.p`text-sm text-paysure-50 mt-1 mb-2 lg:(text-base mb-3)`
+const H1 = tw.h1`font-semibold text-2xl sm:text-3xl lg:text-3xl xl:text-[30px] text-[#191716]`
+const P = tw.p`text-sm text-paysure-50 mt-1 mb-2 lg:(text-sm mb-3)`
 const Title = tw.h3`tracking-[-0.02em] text-gray-dark`
 
 export default HomeDisplayCard

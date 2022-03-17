@@ -1,12 +1,27 @@
 import React from 'react'
 import tw from 'twin.macro'
+import Router from 'next/router'
 
-import NavBar from './NavBar.main_layout'
-import SideBar from './SideBar.main_layout'
+import NavBar from './NavBar.'
+import SideBar from './SideBar'
 
 const Index_main_layout = ({ children, title, goBack }) => {
   // usestate hook
   const [isSideBarOpen, setIsSideBarOpen] = React.useState(false)
+
+  // useEffect hook
+  // React.useEffect(() => {
+  //   // check if user is logged in
+  //   if (!user.isLoggedIn && localStorage.getItem('user')) {
+  //     dispatch(login(JSON.parse(localStorage.getItem('user'))))
+  //   }
+  // }, [user])
+
+  // React.useEffect(() => {
+  //   if (!localStorage.getItem('user')) {
+  //     Router.push('/login')
+  //   }
+  // }, [user])
 
   return (
     <Wrapper>

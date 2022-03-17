@@ -1,15 +1,15 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Head from 'next/Head'
-import HomeDashboard from '../components/PageComponents/HomeDashboard'
+import SettlementDashboard from '../components/PageComponents/SettlementDashboard'
 
 const IndexPage = () => (
   <div>
     <Head>
-      <title>Home | PaySure</title>
+      <title>Settlement | PaySure</title>
     </Head>
 
-    <HomeDashboard/>
+    <SettlementDashboard/>
   </div>
 )
 

@@ -3,13 +3,9 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import Image from 'next/image'
 import Router from 'next/router'
-import { destroyCookie } from 'nookies'
-import { useDispatch } from 'react-redux'
 import { IconButton, Menu, MenuItem } from '@mui/material'
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//               These are svg import, so get your svg and replace
-// import { SettingsOUtline, CircledUser, MenuHamburger } from '../../SVGIcons'
+import { SettingsOUtline, CircledUser, MenuHamburger } from '../../SVGIcons'
 
 const NavBar_main_layout = ({ setIsSideBarOpen, title, goBack }) => {
   // useState hook
@@ -42,6 +38,7 @@ const NavBar_main_layout = ({ setIsSideBarOpen, title, goBack }) => {
   const handleLogout = React.useCallback(() => {
     setAnchorEl(null)
 
+    // dispatch(logout())
     // destroyCookie(null, 'USER_AUTHORIZATION')
     // localStorage.removeItem('user')
     // Router.push('/login')
@@ -54,7 +51,7 @@ const NavBar_main_layout = ({ setIsSideBarOpen, title, goBack }) => {
           <Link href="/">
             <a>
               <Image
-                src="/images/logo_purple.png"
+                src="/Images/Paysure__.png"
                 alt="paysure"
                 width="92px"
                 height="24px"
@@ -119,8 +116,8 @@ const InnerWrapper = tw.div`flex items-center justify-between w-full`
 const ImageWrapper = tw.div`lg:hidden`
 const Title = tw.h5`text-sm hidden lg:block`
 const Title2 = tw.h5`text-sm lg:hidden mt-2`
-const AuthWrapper = tw.div`flex items-center space-x-4 text-paysure-text-100`
-const Button = tw.button`normal-case text-paysure-text-100 text-sm hover:(underline)`
+const AuthWrapper = tw.div`flex items-center space-x-4 text-paysure-primary-100`
+const Button = tw.button`normal-case text-paysure-primary-100 text-sm hover:(underline)`
 const Button1 = tw(Button)`hidden lg:block`
 const Button2 = tw(Button)`lg:hidden mt-2`
 

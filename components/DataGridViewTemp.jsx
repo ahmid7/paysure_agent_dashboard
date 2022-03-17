@@ -30,12 +30,13 @@ const DataGridViewTemp = ({
 
         {link && (
           <Link href={link}>
-            <a css={[tw`text-paysure-100 hover:underline cursor-pointer`]}>
+            <a css={[tw`text-paysure-primary-100 hover:underline cursor-pointer`]}>
               View all
             </a>
           </Link>
         )}
       </div>
+      
       <DataGridView
         rows={rows}
         columns={columns}
@@ -57,6 +58,6 @@ const DataGridViewTemp = ({
 }
 
 // Tailwind Styles
-const Title = tw.h3`tracking-[-0.02em] text-gray-dark lg:(text-[20px])`
+const Title = tw.h3`tracking-[-0.02em] text-gray-dark font-semibold `
 
 export default DataGridViewTemp
