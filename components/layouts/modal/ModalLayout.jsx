@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import React from 'react'
 import { Button, Dialog, Divider } from '@mui/material'
-import { Close } from '../SVGIcons'
+import { Close } from '../../SvgIcons'
 
 const Index_modal_layout = ({
   title,
@@ -20,7 +20,7 @@ const Index_modal_layout = ({
       onClose={handleClose}
       open={state}
       tw=""
-      maxWidth="md"
+      maxWidth="xs"
       fullWidth
       sx={{ '& .MuiDialog-paper': { borderRadius: '20px' } }}
     >

@@ -4,7 +4,7 @@ import Head from 'next/Head'
 import Index from '../../components/PageComponents/BIllComponent/index'
 
 const TvSub = () => {
-  const data = [ 'TV subscription', 'Buy Sub' ]
+  const data = ['TV subscription', 'Buy Sub', '/billpayment/TvSubPurchase']
   return (
     <div>
         <Head>

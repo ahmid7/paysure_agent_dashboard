@@ -6,10 +6,10 @@ import { BuyIcon } from '../../SVGIcons'
 import { useRouter } from 'next/router'
 
 const Index = ({data }) => {
-   const [ title , buttonText] = data
+   const [ title , buttonText, link] = data
    const router = useRouter()
    const handleButton = () => {
-      router.push('/billpayment/purchase')
+      router.push(`${link}`)
    }
 
 

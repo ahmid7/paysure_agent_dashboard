@@ -4,11 +4,11 @@ import Head from 'next/Head'
 import Index from '../../components/PageComponents/BIllComponent/index'
 
 const Tax = () => {
-    const data = [ 'Internet', 'Pay Bills' ]
+    const data = [ 'Tax', 'Pay Tax' , '/billpayment/Taxpayment']
     return (
       <div>
           <Head>
-              <title>Internet | PaySure</title>
+              <title>Tax | PaySure</title>
           </Head>
   
           <Index data={ data }/>

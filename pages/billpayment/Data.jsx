@@ -4,7 +4,7 @@ import Head from 'next/Head'
 import Index from '../../components/PageComponents/BIllComponent/index'
 
 const Data = () => {
-  const data = [ 'Data', 'Buy Data' ]
+  const data = [ 'Data', 'Buy Data' ,'/billpayment/DataPurchase']
   return (
     <div>
         <Head>

@@ -5,6 +5,8 @@ import { Button } from '@mui/material'
 import { UserIcon,UserIcon2 } from '../SVGIcons'
 import AgentInfo from '../AgentInfo'
 import WalletInfo from '../WalletInfo'
+import DataGridViewTemp from '../DataGridViewTemp'
+import DataGridView from '../DataGridView'
 
 const ProfileDashboard = () => {
     const transactionData = [
@@ -25,6 +27,157 @@ const ProfileDashboard = () => {
           label: 'Pending',
         },        
     ]
+
+    const rows = [
+        {
+          id: 1,
+          col1: 1,
+          col2: 'TID- 212969',
+          col3: 'SD9212969',
+          col4: 'Union Bank',
+          col5: '70',
+          col6: 'N  8,029,182',
+          col7: 'ACTIVE',
+          col8: 'Dec 30,2019',
+        },
+        {
+          id: 2,
+          col1: 2,
+          col2: 'TID- 212969',
+          col3: 'SD9212969',
+          col4: 'Union Bank',
+          col5: '70',
+          col6: 'N  8,029,182',
+          col7: 'ACTIVE',
+          col8: 'Dec 30,2019',
+        },
+      ]
+    
+      const columns = [
+        {
+          field: 'col1',
+          headerName: 'S/N',
+          minWidth: 60,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col2',
+          headerName: 'Terminal ID',
+          minWidth: 120,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col3',
+          headerName: 'Serial No',
+          minWidth: 140,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col4',
+          headerName: 'Bank',
+          minWidth: 120,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col5',
+          headerName: 'No of Transactions',
+          minWidth: 150,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col6',
+          headerName: 'Transactions(N)',
+          minWidth: 150,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col7',
+          headerName: 'Status',
+          minWidth: 120,
+          flex: 1,
+          headerClassName: 'grid-header',
+          renderCell: params => {
+            return (
+              <span css={[tw`bg-border2 text-paysure-success-100 p-1 rounded`]}>
+                {params.row.col7}
+              </span>
+            )
+          },
+        },
+        {
+          field: 'col8',
+          headerName: 'Date Added',
+          minWidth: 140,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+            field: 'col9',
+            headerName: 'Actions',
+            minWidth: 101,
+            flex: 1,
+            headerClassName: 'grid-header',
+        },
+      ]
+
+
+      const settlementColumns = [
+        {
+          field: 'col1',
+          headerName: 'S/N',
+          minWidth: 55,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col2',
+          headerName: 'Terminal ID',
+          minWidth: 100,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col3',
+          headerName: 'Transaction ID',
+          minWidth: 100,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col4',
+          headerName: 'Amount',
+          minWidth: 150,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col5',
+          headerName: 'Status',
+          minWidth: 150,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col6',
+          headerName: 'Date Added',
+          minWidth: 150,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+        {
+          field: 'col7',
+          headerName: 'Actions',
+          minWidth: 160,
+          flex: 1,
+          headerClassName: 'grid-header',
+        },
+      ]
 
     const AgentInformation = [
         'deanna.curtis@example.com',
@@ -91,6 +244,23 @@ const ProfileDashboard = () => {
             <div tw='mt-6 grid grid-cols-2 gap-7'>
                 <AgentInfo data = {AgentInformation}/>
                 <WalletInfo data = { WalletInformation }/>
+            </div>
+
+            <div tw='mt-12'>
+                <p>Terminals</p>
+                <DataGridView
+                rows={ rows }
+                columns = { columns }
+                hasFilterShowing
+                /> 
+            </div>
+
+            <div tw='mt-12'>
+                <p>Settlements</p>
+                <DataGridView
+                columns = { settlementColumns }
+                hasFilterShowing
+                /> 
             </div>
 
         </section>

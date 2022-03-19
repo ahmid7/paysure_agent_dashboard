@@ -23,48 +23,120 @@ const SettlementDashboard = () => {
         },
         
     ]
-    const columns = [
-        {
-          field:'S/N',
-        },
-        {
-          field:'Amount'
-        },
-        {
-          field:'Type'
-        },
-        {
-          field:'Identifier'
-        },
-        {
-          field:'RRR'
-        },
-        {
-          field:'Status'
-        },
-        {
-          field:'Date'
-        },
-      ]
     
-      const rows = [
-        {
-          id:'1',
-          col1:'done'
+    const rows = [
+      {
+        id: 1,
+        col1: 1,
+        col2: 'N639,000.00',
+        col3: 'POS withdrawal',
+        col4: 'TID 00139',
+        col5: 'BA9212320',
+        col6: 'Paid',
+        col7: 'Dec 30, 2019 05:18',
+      },
+      {
+        id: 2,
+        col1: 2,
+        col2: 'N639,000.00',
+        col3: 'POS withdrawal',
+        col4: 'TID 00139',
+        col5: 'BA9212320',
+        col6: 'Paid',
+        col7: 'Dec 30, 2019 05:18',
+      },
+      {
+        id: 3,
+        col1: 3,
+        col2: 'N639,000.00',
+        col3: 'POS withdrawal',
+        col4: 'TID 00139',
+        col5: 'BA9212320',
+        col6: 'Paid',
+        col7: 'Dec 30, 2019 05:18',
+      },
+      {
+        id: 4,
+        col1: 4,
+        col2: 'N639,000.00',
+        col3: 'POS withdrawal',
+        col4: 'TID 00139',
+        col5: 'BA9212320',
+        col6: 'Paid',
+        col7: 'Dec 30, 2019 05:18',
+      },
+      {
+        id: 5,
+        col1: 5,
+        col2: 'N639,000.00',
+        col3: 'POS withdrawal',
+        col4: 'TID 00139',
+        col5: 'BA9212320',
+        col6: 'Paid',
+        col7: 'Dec 30, 2019 05:18',
+      },
+    ]
+  
+    const columns = [
+      {
+        field: 'col1',
+        headerName: 'S/N',
+        minWidth: 50,
+        flex: 0,
+        headerClassName: 'grid-header',
+      },
+      {
+        field: 'col2',
+        headerName: 'Amount',
+        minWidth: 140,
+        flex: 1,
+        headerClassName: 'grid-header',
+      },
+      {
+        field: 'col3',
+        headerName: 'Type',
+        minWidth: 130,
+        flex: 1,
+        headerClassName: 'grid-header',
+      },
+      {
+        field: 'col4',
+        headerName: 'Identifier',
+        minWidth: 126,
+        flex: 1,
+        headerClassName: 'grid-header',
+      },
+      {
+        field: 'col5',
+        headerName: 'RRR',
+        minWidth: 101,
+        flex: 1,
+        headerClassName: 'grid-header',
+      },
+      {
+        field: 'col6',
+        headerName: 'Status',
+        minWidth: 139,
+        flex: 1,
+        headerClassName: 'grid-header',
+        disableClickEventBubbling: true,
+        renderCell: params => {
+          return (
+            <span css={[tw`bg-border2 text-paysure-primary-100 p-1 rounded`]}>
+              {params.row.col6}
+            </span>
+          )
         },
-        {
-          id:'1',
-          col2:'done'
-        },
-        {
-          id:'1',
-          col3:'done'
-        },
-        {
-          id:'1',
-          col4:'done'
-        }, 
-      ]
+      },
+      {
+        field: 'col7',
+        headerName: 'Date',
+        minWidth: 144,
+        flex: 1,
+        headerClassName: 'grid-header',
+      },
+    ]
+
   return (
     <MainLayout title='settlement'>
        <div>

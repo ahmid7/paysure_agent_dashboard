@@ -1,14 +1,14 @@
 
 import React from 'react'
 import tw from 'twin.macro'
-import { MainLayout } from '../../index'
+import { MainLayout } from '../../../index'
 import TextField from '@mui/material/TextField'
 import { Button, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
-import SideBarBillPurchase from './LeftSideBarBillPurchase'
-import RightSideBarBillPurchase from './RightSideBarBillPurchase'
+import SideBarBillPurchase from '../LeftSideBarBillPurchase'
+import RightSideBarBillPurchase from '../RightSideBarBillPurchase'
 import { useRouter } from 'next/router'
 
-const AirtimePurchase = () => {
+const DataPurchase = () => {
 
     const router = useRouter()
     const [network, setNetwork] = React.useState('');
@@ -16,35 +16,46 @@ const AirtimePurchase = () => {
     const handleChange = (event) => {
       setNetwork(event.target.value);
     };
+    const [networklabel, setNetworkLabel] = React.useState('10');
+
+    const hanleNetworkLabel = (event) => {
+      setNetworkLabel(event.target.value);
+    };
     
     const handleNextButton = () => {
-        router.push('/billpayment/purchase/AirtimeTransactionPinPage')
+        router.push('/billpayment/DataPurchase/DataTransactionPinPage')
     }
 
   return ( 
     <MainLayout title= "Bills >> Airtime">
         <section tw='border-t-2 border-[#E4ECF7]  -mt-8'> 
             <div tw='flex '>
-                <SideBarBillPurchase/>
+                <SideBarBillPurchase value='Data'/>
 
                 <form tw=' w-[50%] pt-8'>
                     <div tw='w-[60%] mx-auto'>
                         <div tw=''>
-                            <div tw='flex flex-col gap-y-1'>
-                                <label tw='font-normal text-sm'>
-                                    Amount
-                                </label>
-
-                                <TextField 
-                                size='small'
-                                placeholder='N5000'
-                                tw=''
-                                />
+                            <div tw='mt-5'>
+                                <FormControl fullWidth>
+                                    <label tw='font-normal text-sm'>Network</label>
+                                    <Select
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    value={networklabel}
+                                    onChange={hanleNetworkLabel }
+                                    size='small'
+                                    >
+                                    <MenuItem value={10}>Airtel</MenuItem>
+                                    <MenuItem value={20}>Mtn</MenuItem>
+                                    <MenuItem value={30}>Etisalat</MenuItem>
+                                    <MenuItem value={40}>Glo</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
 
                             <div tw='mt-5'>
                                 <FormControl fullWidth>
-                                <label tw='font-normal text-sm'>Network</label>
+                                <label tw='font-normal text-sm'>Choose Plan</label>
                                     <Select
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
@@ -52,10 +63,10 @@ const AirtimePurchase = () => {
                                     onChange={handleChange}
                                     size='small'
                                     >
-                                    <MenuItem value={10}>Airtel</MenuItem>
-                                    <MenuItem value={20}>Mtn</MenuItem>
-                                    <MenuItem value={30}>Etisalat</MenuItem>
-                                    <MenuItem value={40}>Glo</MenuItem>
+                                    <MenuItem value={1}>Data plan gives 100Gb for N20,000</MenuItem>
+                                    <MenuItem value={2}>Data plan gives 100Gb for N20,000</MenuItem>
+                                    <MenuItem value={3}>Data plan gives 100Gb for N20,000</MenuItem>
+                                    <MenuItem value={4}>Data plan gives 100Gb for N20,000</MenuItem>
                                     </Select>
                                 </FormControl>
                             </div>
@@ -95,4 +106,4 @@ const AirtimePurchase = () => {
   )
 }
 
-export default AirtimePurchase
+export default DataPurchase

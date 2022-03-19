@@ -1,9 +1,9 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Head from 'next/Head'
-import ProfileDashboard from '../components/PageComponents/ProfileDashboard'
+import ProfileDashboard from '../../components/PageComponents/ProfileDashboard'
 
-const Profile = () => {
+const Index = () => {
   return (
     <div>
         <Head>
@@ -15,4 +15,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default Index

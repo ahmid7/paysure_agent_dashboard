@@ -4,7 +4,7 @@ import Head from 'next/Head'
 import Index from '../../components/PageComponents/BIllComponent/index'
 
 const Electricity = () => {
-    const data = [ 'Electricity', 'Pay Bills' ]
+    const data = [ 'Electricity', 'Pay Bills' , '/billpayment/ElectricityPurchase']
     return (
       <div>
           <Head>
@@ -16,4 +16,4 @@ const Electricity = () => {
     )
   }
   
-  export default Data
+  export default Electricity

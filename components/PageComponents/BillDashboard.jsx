@@ -49,7 +49,7 @@ const BillDashboard = () => {
                     <p tw='font-semibold text-sm pt-4'>Tax</p>
                 </div>
 
-                <div tw='px-6 border-2 rounded-xl pt-9 pb-4' onClick = { () => {router.push('/Bills/Internet')}}>
+                <div tw='px-6 border-2 rounded-xl pt-9 pb-4' onClick = { () => {router.push('/billpayment/Internet')}}>
                     <Internet/>
 
                     <p tw='font-semibold text-sm pt-4'>Internet</p>

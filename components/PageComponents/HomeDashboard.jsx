@@ -2,86 +2,18 @@ import React from 'react'
 import tw from 'twin.macro'
 import { MainLayout,HomeDisplayCard,OverviewCardTemp, DataGridViewTemp  } from '../index'
 import { useRouter } from 'next/router'
-
+import Modal from '../layouts/modal/ModalLayout'
+import Index_modal_layout from '../modal/ModalLayout'
 
 const HomeDashboard = () => {
+  const [isModalOPen, setisModalOpen] = React.useState(false)
+  
   const router = useRouter()
 
   const handleKycButton = () => {
     router.push('/')
   }
-
-  // const columns = [
-  //   {
-  //     field:'S/N',
-  //   },
-  //   {
-  //     field:'Transaction type'
-  //   },
-  //   {
-  //     field:'Ref.No'
-  //   },
-  //   {
-  //     field:'Terminal ID'
-  //   },
-  //   {
-  //     field:'Pan Account'
-  //   },
-  //   {
-  //     field:'Auth Code'
-  //   },
-  //   {
-  //     field:'Amount'
-  //   },
-  //   {
-  //     field:'Charges'
-  //   },
-  //   {
-  //     field:'Settlement'
-  //   },
-  //   {
-  //     field:'Status'
-  //   },
-  //   {
-  //     field:'Date,Time'
-  //   }
-  // ]
-
-  // const rows = [
-  //   {
-  //     id:'1',
-  //     col1:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col2:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col3:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col4:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col5:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col6:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col7:'done'
-  //   },
-  //   {
-  //     id:'1',
-  //     col8:'done'
-  //   }
-
-  // ]
+  
   const rows = [
     {
       id: 1,
@@ -281,6 +213,19 @@ const HomeDashboard = () => {
                 <button>Got to profile</button>
               </div>
           </div>
+
+          {/* Temp */}
+
+          {/* <div>
+            <button onClick= {() => setisModalOpen(true)}>Open Modal</button>
+
+            <Modal state={isModalOPen} setState= {setisModalOpen} title="Testing" buttonLabel="Nice">
+              <h1>Here we go boy</h1>
+            </Modal>
+            
+          </div> */}
+          
+          {/* Temp */}
 
           {/* overview section */}
 

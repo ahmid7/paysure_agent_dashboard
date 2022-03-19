@@ -4,7 +4,7 @@ import Head from 'next/Head'
 import Index from '../../components/PageComponents/BIllComponent/index'
 
 const Transfer = () => {
-    const data = [ 'Transfer', 'Make Transfer' ]
+    const data = [ 'Transfer', 'Make Transfer','/billpayment/TransferTransaction' ]
     return (
       <div>
           <Head>
